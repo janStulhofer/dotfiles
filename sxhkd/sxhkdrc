@@ -1,0 +1,52 @@
+#Terminal open
+super + Return
+	alacritty
+
+#Program launcher
+super + @space
+	dmenu_run
+
+#Sxhkd reload config
+super + Escape
+	pkill -USR1 -x sxhkd
+
+
+#BSPWM Hotkeys
+#Quit / Restart
+super + alt + {q,r}
+	bspc {quit, wm -r}
+
+#Close and kill
+super + {_,shift+ }w
+	bspc node -{c,k}
+
+#Window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+#Expand window
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20 ,top 0 -20,right 20 0}
+
+#Inc window
+super + {h,j,k,l}
+	bspc node -z {left 20 0,bottom 0 -20,top 0 20,right -20 0}
+
+#Move floating window
+#super + {Left,Down,Up,Right}
+#	bspc node -v {-20 0,0 20,0 -20,20 0}	
+
+#Move next Desktop
+super + {Left,Right}
+	bspc desktop -f {prev,next}
+
+#Move select next Desktop
+super + alt + {Left,Right}
+	bspc node -d {prev,next}
+
+#Screen
+Print
+	maim --select | xclip -selection clipboard -t image/png
+
+shift + Print
+	maim --select >> ~/Pictures/$(date +%s).png
