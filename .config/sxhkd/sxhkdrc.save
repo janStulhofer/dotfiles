@@ -4,10 +4,12 @@ super + Return
 
 #Program launcher
 super + @space
-	$HOME/.config/rofi/launchers/type-6/launcher.sh
+	rofi
 
 #Powermenu
-Control_R + super
+Control_R
+
+ + super
 	$HOME/.config/rofi/powermenu/type-5/powermenu.sh
 
 #Sxhkd reload config
