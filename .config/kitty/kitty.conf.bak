@@ -1,0 +1,16 @@
+# Font 
+font_family ShureTechMono Nerd Font
+italic_font auto
+bold_italic_font auto
+font_size 14.0
+
+
+
+
+background_opacity 0.80
+
+# BEGIN_KITTY_THEME
+# IC Green PPL
+include current-theme.conf
+url_color #d65c9d
+# END_KITTY_THEME
