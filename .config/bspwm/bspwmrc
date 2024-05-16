@@ -28,3 +28,4 @@ nitrogen --restore &
 polybar &
 picom &
 kdeconnect-cli &
+./$HOME/dotfiles/.config/customTweaks/middleScroll.sh &
